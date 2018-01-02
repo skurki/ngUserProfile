@@ -1,0 +1,54 @@
+
+<div>
+    <h1>Update Profile</h1>
+</div>
+
+<div class='panel panel-primary' *ngIf='profile'>
+        <div class='panel-heading'>
+            {{pageTitle}}
+        </div>
+      
+        <div class='panel-body'>
+            <div class='row'>
+                <div class='col-md-6'>
+                    <div class='row'>
+                        <div class='col-md-3'>ID:</div>
+                        <div class='col-md-6'>{{profile.id}}</div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-3'>First Name:</div>
+                        <div class='col-md-6'><input type='text' [(ngModel)] ='profile.firstName' /></div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-3'>Last Name:</div>
+                        <div class='col-md-6'><input type='text' [(ngModel)]='profile.lastName' /></div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-3'>Email Id:</div>
+                        <div class='col-md-6'><input type='text' [(ngModel)]='profile.emailId' /></div>
+                    </div>
+                    <div class='row'>
+                         <div class='col-md-3'>County:</div>
+                        <div class='col-md-6'><input type='text' [(ngModel)]='profile.county' /></div>
+                    </div>
+                        <div class='row'>
+                        <div class='col-md-3'>State:</div>
+                        <div class='col-md-6'><input type='text' [(ngModel)]='profile.state' /></div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-md-3'>Country:</div>
+                        <div class='col-md-6'><input type='text' [(ngModel)]='profile.country' /></div>
+                    </div>                                                                        
+                </div>
+            </div>
+        </div>
+      
+          <div class='panel-footer'>
+              <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+                  <i class='glyphicon glyphicon-chevron-left'></i> Back
+              </a>
+              <a class='btn btn-default' (click)='onUpdate(profile.id)' style='width:80px'>
+                  Update<i class='glyphicon glyphicon-chevron'></i>
+              </a>
+          </div>
+      </div>  

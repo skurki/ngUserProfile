@@ -1,0 +1,53 @@
+
+<div class='panel panel-primary'>
+        <div class='panel-heading'>
+            {{pageTitle}}
+        </div>
+        <div class='panel-body'>
+            <div class='row'>
+                <div class='col-md-2'><b>Filter by First Name:</b></div>
+                <div class='col-md-4'>
+                    <input type='text' [(ngModel)] = 'listFilter' />
+                </div>
+            </div>
+            <div class='row'>
+                <div class='col-md-6'>
+                    <h3><b>Filtered by:</b> {{listFilter}} </h3>
+                </div>
+            </div>
+            <div class='table-responsive'>
+                <table class='table'
+                    *ngIf = 'profiles && profiles.length'>
+                    <thead>
+                        <tr>
+                            <th>
+                                <button class='btn btn-primary'>
+                                    Show Email
+                                </button>
+                            </th>
+                            <th>Profile Id</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>5 Star Rating</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = 'let profile of filteredProfiles'>
+                            <td>{{ profile.emailId }}</td>
+                            <td><a [routerLink]="['/profile', profile.id]">{{ profile.id }}</a></td>
+                            <td>{{ profile.firstName }}</td>
+                            <td>{{ profile.lastName  | uppercase }}</td>
+                            <td>* * * * *</td>
+                            <td>
+                                <button class='btn btn-primary' (click)='onDelete(profile.id)'>
+                                    Delete Profile
+                                </button>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>

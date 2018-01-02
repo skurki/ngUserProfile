@@ -1,0 +1,47 @@
+
+
+<div class='panel panel-primary' *ngIf='profile'>
+  <div class='panel-heading'>
+      {{pageTitle + ': ' + profile.firstName}}
+  </div>
+
+  <div class='panel-body'>
+      <div class='row'>
+          <div class='col-md-6'>
+              <div class='row'>
+                  <div class='col-md-3'>ID:</div>
+                  <div class='col-md-6'>{{profile.id}}</div>
+              </div>
+              <div class='row'>
+                  <div class='col-md-3'>First Name:</div>
+                  <div class='col-md-6'>{{profile.firstName}}</div>
+              </div>
+              <div class='row'>
+                  <div class='col-md-3'>Last Name:</div>
+                  <div class='col-md-6'>{{profile.lastName}}</div>
+              </div>
+              <div class='row'>
+                  <div class='col-md-3'>Email Id:</div>
+                  <div class='col-md-6'>{{profile.emailId}}</div>
+              </div>
+              <div class='row'>
+                    <div class='col-md-3'>County:</div>
+                    <div class='col-md-6'>{{profile.county}}</div>
+                </div>
+                <div class='row'>
+                        <div class='col-md-3'>State:</div>
+                        <div class='col-md-6'>{{profile.state}}</div>
+                    </div>                             
+          </div>
+      </div>
+  </div>
+
+    <div class='panel-footer'>
+        <a class='btn btn-default' (click)='onBack()' style='width:80px'>
+            <i class='glyphicon glyphicon-chevron-left'></i> Back
+        </a>
+        <a class='btn btn-default' (click)='onEdit(profile.id)' style='width:80px'>
+            Edit<i class='glyphicon glyphicon-chevron-right'></i>
+        </a>
+    </div>
+</div>  
