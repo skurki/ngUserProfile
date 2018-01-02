@@ -17,7 +17,7 @@ export class AddProfileComponent implements OnInit {
     profile: IProfile;
     errorMessage: string;
 
-    private svcUrl: string= 'http://localhost:8080/api/v1/userprofile/user';
+    private svcUrl: string= 'http://localhost:8080/api/userprofile/v1/user';
 
     constructor(private _route: ActivatedRoute,
         private _router: Router,

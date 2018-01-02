@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 
 export class ProfileListComponent implements OnInit {
 
-    private svcUrl: string= 'http://localhost:8080/api/v1/userprofile/user';
+    private svcUrl: string= 'http://localhost:8080/api/userprofile/v1/user';
     pageTitle: string = 'Profile List';
     _listFilter: string;
     errorMessage: string;

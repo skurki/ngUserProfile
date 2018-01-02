@@ -26,7 +26,7 @@ export class ProfileDetailComponent implements OnInit {
     this.pageTitle += `:  ${id}`;
    // this._id = this._route.snapshot.paramMap.get('id');
 
-    this._profileService.getProfile('http://localhost:8080/api/v1/userprofile/user/' + id)
+    this._profileService.getProfile('http://localhost:8080/api/userprofile/v1/user/' + id)
           .subscribe(profile => {
             this.profile = profile;
         },
