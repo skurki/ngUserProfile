@@ -19,7 +19,8 @@ export class EditProfileComponent implements OnInit{
     errorMessage: string;
     profile: IProfile;
     
-    private svcUrl: string= 'http://localhost:8080/api/userprofile/v1/user';
+    private svcUrl: string = 'https://userprofile-skurki.cfapps.io/api/userprofile/v1/user'; 
+    //'http://localhost:8080/api/userprofile/v1/user';
 
     constructor(private _route: ActivatedRoute,
         private _profileService: ProfileService,

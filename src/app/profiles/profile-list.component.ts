@@ -13,7 +13,8 @@ import { Router } from '@angular/router';
 
 export class ProfileListComponent implements OnInit {
 
-    private svcUrl: string= 'http://localhost:8080/api/userprofile/v1/user';
+    private svcUrl: string = 'https://userprofile-skurki.cfapps.io/api/userprofile/v1/user'; 
+    //'http://localhost:8080/api/userprofile/v1/user';
     pageTitle: string = 'Profile List';
     _listFilter: string;
     errorMessage: string;
@@ -69,13 +70,13 @@ export class ProfileListComponent implements OnInit {
         //   },
         //   error => this.errorMessage = <any>error);
 
-        this.ngOnInit();
+            this.ngOnInit();
           //this._router.navigate(['/profiles']);
     }
 
     toggleEmail(): void {
-        console.log('in toggleEmail');
-        console.log(this.showEmail);
+       // console.log('in toggleEmail');
+       // console.log(this.showEmail);
         this.showEmail = !this.showEmail;
     }
  

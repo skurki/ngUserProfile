@@ -15,7 +15,8 @@ export class ProfileDetailComponent implements OnInit {
   pageTitle: string = 'Profile Detail';
   profile: IProfile;
   errorMessage: string;
- // private _id: string;
+  private svcUrl: string = 'https://userprofile-skurki.cfapps.io/api/userprofile/v1/user';
+
   
   constructor(private _route: ActivatedRoute,
         private _router: Router,
@@ -26,7 +27,7 @@ export class ProfileDetailComponent implements OnInit {
     this.pageTitle += `:  ${id}`;
    // this._id = this._route.snapshot.paramMap.get('id');
 
-    this._profileService.getProfile('http://localhost:8080/api/userprofile/v1/user/' + id)
+    this._profileService.getProfile(this.svcUrl + '/' + id)
           .subscribe(profile => {
             this.profile = profile;
         },
