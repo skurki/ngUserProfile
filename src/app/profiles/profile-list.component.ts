@@ -64,12 +64,6 @@ export class ProfileListComponent implements OnInit {
           },
           error => this.errorMessage = <any>error);
   
-        //   this._profileService.getProfile(this.svcUrl)
-        //     .subscribe(profile => {
-        //      // this.profile = profile;
-        //   },
-        //   error => this.errorMessage = <any>error);
-
             this.ngOnInit();
           //this._router.navigate(['/profiles']);
     }
