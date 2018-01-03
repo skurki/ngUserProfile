@@ -17,6 +17,7 @@ export class ProfileListComponent implements OnInit {
     pageTitle: string = 'Profile List';
     _listFilter: string;
     errorMessage: string;
+    showEmail: boolean = false;
 
     constructor (private _profileService: ProfileService,
             private _router: Router) {
@@ -70,6 +71,12 @@ export class ProfileListComponent implements OnInit {
 
         this.ngOnInit();
           //this._router.navigate(['/profiles']);
+    }
+
+    toggleEmail(): void {
+        console.log('in toggleEmail');
+        console.log(this.showEmail);
+        this.showEmail = !this.showEmail;
     }
  
 }

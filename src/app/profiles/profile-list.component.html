@@ -21,8 +21,8 @@
                     <thead>
                         <tr>
                             <th>
-                                <button class='btn btn-primary'>
-                                    Show Email
+                                <button class='btn btn-primary' (click)='toggleEmail()'>
+                                   {{ showEmail ? 'Hide' : 'Show' }}  Email
                                 </button>
                             </th>
                             <th>Profile Id</th>
@@ -34,7 +34,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor = 'let profile of filteredProfiles'>
-                            <td>{{ profile.emailId }}</td>
+                            <td><h5 *ngIf='showEmail'> {{ profile.emailId }} </h5></td>
                             <td><a [routerLink]="['/profile', profile.id]">{{ profile.id }}</a></td>
                             <td>{{ profile.firstName }}</td>
                             <td>{{ profile.lastName  | uppercase }}</td>
